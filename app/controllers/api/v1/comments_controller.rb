@@ -1,4 +1,3 @@
-
 module Api
   module V1
     class CommentsController < ApplicationController
@@ -10,7 +9,7 @@ module Api
         @comment = @post.comments.build(comment_params)
 
         if @comment.save
-          render json: @comment, status: :created
+          render json: @comment, status: :created, serializer: CommentSerializer
         else
           render json: @comment.errors, status: :unprocessable_entity
         end

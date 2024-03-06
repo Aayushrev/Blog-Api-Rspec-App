@@ -6,27 +6,27 @@ module Api
 
       def index
         @posts = Post.all
-        render json: @posts
+        render json: @posts, each_serializer: PostSerializer
       end
 
       def show
-        render json: @post
+        render json: @post, serializer: PostSerializer
       end
 
       def new
-        @post = Post.new(post_params)
-        render json: @post
+        @post = Post.new
+        render json: @post, serializer: PostSerializer
       end
 
       def edit
-        render json: @post
+        render json: @post, serializer: PostSerializer
       end
 
       def create
         @post = Post.new(post_params)
 
         if @post.save
-          render json: @post, status: :created
+          render json: @post, status: :created, serializer: PostSerializer
         else
           render json: @post.errors, status: :unprocessable_entity
         end
@@ -34,7 +34,7 @@ module Api
 
       def update
         if @post.update(post_params)
-          render json: @post
+          render json: @post, serializer: PostSerializer
         else
           render json: @post.errors, status: :unprocessable_entity
         end
