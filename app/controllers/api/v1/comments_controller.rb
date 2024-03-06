@@ -2,6 +2,7 @@
 module Api
   module V1
     class CommentsController < ApplicationController
+      skip_before_action :verify_authenticity_token
       before_action :set_post
       before_action :set_comment, only: [:destroy]
 
