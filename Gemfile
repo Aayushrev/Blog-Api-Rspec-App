@@ -75,3 +75,5 @@ gem 'cancancan'
 gem 'draper'
 gem 'pundit'
 gem "sassc-rails"
+
+gem 'activeadmin_quill_editor'
