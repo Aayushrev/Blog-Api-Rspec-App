@@ -68,3 +68,10 @@ end
 
 gem 'active_model_serializers'
 
+gem 'activeadmin'
+
+gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
+gem "sassc-rails"
