@@ -1,4 +1,5 @@
 ActiveAdmin.setup do |config|
+  # config.default_namespace = :admin
   # == Site Title
   #
   # Set the title that is displayed on the main layout

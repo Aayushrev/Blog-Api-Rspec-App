@@ -53,6 +53,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
 
   gem 'rspec-rails'
+  gem 'factory_bot_rails'
 end
 
 group :development do
@@ -77,3 +78,6 @@ gem 'pundit'
 gem "sassc-rails"
 
 gem 'activeadmin_quill_editor'
+gem 'faker'
+gem 'capybara'
+gem 'rails-controller-testing'
