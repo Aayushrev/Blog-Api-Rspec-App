@@ -33,6 +33,7 @@ module Api
       end
 
       def update
+        @post = Post.find(params[:id])
         if @post.update(post_params)
           render json: @post, serializer: PostSerializer
         else

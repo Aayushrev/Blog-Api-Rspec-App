@@ -4638,3 +4638,1518 @@ AdminUser.create!(email: 'user@example.com', password: '123456789', password_con
 # Finished in 0.00014 seconds (files took 19.76 seconds to load)
 # 0 examples, 0 failures, 9 errors occurred outside of examples
 
+
+
+
+# Copyright (C) Microsoft Corporation. All rights reserved.
+
+# Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+# PS C:\Users\Aayush Pandey> cd .\Desktop\BlogRspec_app\
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .[14, 23] in ~/Desktop/BlogRspec_app/spec/admin/posts_spec.rb
+#     14|       expect(response).to have_http_status(200)
+#     15|     end
+#     16|   end
+#     17|   describe 'GET#show' do
+#     18|     it 'show Post details' do
+# =>  19|       debugger
+#     20|       get :show, params: { id: @post.id }
+#     21|       expect(response).to have_http_status(200)
+#     22|     end
+#     23|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/posts_spec.rb:19
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: expect(response).to have_http_status(200)
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: end
+
+#        expected: "Breweries"
+#             got: "Est qui voluptatem nobis."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 23.11 seconds (files took 15.17 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+
+# While loading ./spec/admin/comments_spec.rb a `raise SyntaxError` occurred, RSpec will now quit.
+# Failure/Error: __send__(method, file)
+
+# SyntaxError:
+#   --> C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#   Unmatched keyword, missing `end' ?
+#      2  RSpec.describe  Admin::CommentsController, type: :controller do
+#   >  4    before(:each) do
+#   >  9    ends
+#     57  end
+#   C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:57: syntax error, unexpected end-of-input, expecting `end' or dummy end (SyntaxError)
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2138:in `load'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2138:in `load_file_handling_errors'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1638:in `block in load_spec_files'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1636:in `each'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1636:in `load_spec_files'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:102:in `setup'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:86:in `run'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'
+# # C:/Ruby33-x64/bin/rspec:25:in `load'
+# # C:/Ruby33-x64/bin/rspec:25:in `<main>'
+# #
+# #   Showing full backtrace because every line was filtered out.
+# #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+# #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+
+
+# Finished in 0.00049 seconds (files took 1.47 seconds to load)
+# 0 examples, 0 failures, 1 error occurred outside of examples
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# FFFFF.F
+
+# Failures:
+
+#   1) Admin::CommentsController GET#index shows all data
+#      Failure/Error: get :index
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:12:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::CommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::CommentsController POST#new creates a address
+#      Failure/Error: post :new, params: params
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"new", :content=>"Nice to be...!", :controller=>"admin/comments", :post_id=>1}
+#      # ./spec/admin/comments_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::CommentsController GET #edit renders the edit template
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:37:in `block (3 levels) in <top (required)>'
+
+#   5) Admin::CommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:42:in `block (3 levels) in <top (required)>'
+
+#   6) Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: delete :destroy, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.53644 seconds (files took 16.77 seconds to load)
+# 7 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:11 # Admin::CommentsController GET#index shows all data
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::CommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::CommentsController POST#new creates a address
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::CommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:41 # Admin::CommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:52 # Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Quibusdam est quia optio."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 4.53 seconds (files took 1 minute 2.19 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.FFFFF
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: put :update, params: { id: @post.id, post: valid_attributes }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:44:in `block (4 levels) in <top (required)>'
+
+#   3) Admin::PostsController PUT #update with valid parameters redirects to the post
+#      Failure/Error: put :update, params: { id: @post.id, post: valid_attributes }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:50:in `block (4 levels) in <top (required)>'
+
+#   4) Admin::PostsController PUT #update with invalid parameters does not update the post if title is too short
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: '1234', content: 'Some content longer than 10 characters' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:57:in `block (4 levels) in <top (required)>'
+
+#   5) Admin::PostsController PUT #update with invalid parameters does not update the post if title is too long
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: 'a' * 101, content: 'Some content longer than 10 characters' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:63:in `block (4 levels) in <top (required)>'
+
+#   6) Admin::PostsController PUT #update with invalid parameters does not update the post if content is too short
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: 'Breweries', content: '123456789' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:69:in `block (4 levels) in <top (required)>'
+
+# Finished in 3.94 seconds (files took 25.75 seconds to load)
+# 8 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:43 # Admin::PostsController PUT #update with valid parameters updates the requested post
+# rspec ./spec/admin/posts_spec.rb:49 # Admin::PostsController PUT #update with valid parameters redirects to the post
+# rspec ./spec/admin/posts_spec.rb:56 # Admin::PostsController PUT #update with invalid parameters does not update the post if title is too short
+# rspec ./spec/admin/posts_spec.rb:62 # Admin::PostsController PUT #update with invalid parameters does not update the post if title is too long
+# rspec ./spec/admin/posts_spec.rb:68 # Admin::PostsController PUT #update with invalid parameters does not update the post if content is too short
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.FFFFF
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: put :update, params: { id: @post.id, post: valid_attributes }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:44:in `block (4 levels) in <top (required)>'
+
+#   3) Admin::PostsController PUT #update with valid parameters redirects to the post
+#      Failure/Error: put :update, params: { id: @post.id, post: valid_attributes }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:50:in `block (4 levels) in <top (required)>'
+
+#   4) Admin::PostsController PUT #update with invalid parameters does not update the post if title is too short
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: '1234', content: 'Some content longer than 10 characters' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:57:in `block (4 levels) in <top (required)>'
+
+#   5) Admin::PostsController PUT #update with invalid parameters does not update the post if title is too long
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: 'a' * 101, content: 'Some content longer than 10 characters' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:63:in `block (4 levels) in <top (required)>'
+
+#   6) Admin::PostsController PUT #update with invalid parameters does not update the post if content is too short
+#      Failure/Error: put :update, params: { id: @post.id, post: { title: 'Breweries', content: '123456789' } }
+
+#      ActiveModel::ForbiddenAttributesError:
+#        ActiveModel::ForbiddenAttributesError
+#      # ./spec/admin/posts_spec.rb:69:in `block (4 levels) in <top (required)>'
+
+# Finished in 4.67 seconds (files took 30.06 seconds to load)
+# 8 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:43 # Admin::PostsController PUT #update with valid parameters updates the requested post
+# rspec ./spec/admin/posts_spec.rb:49 # Admin::PostsController PUT #update with valid parameters redirects to the post
+# rspec ./spec/admin/posts_spec.rb:56 # Admin::PostsController PUT #update with invalid parameters does not update the post if title is too short
+# rspec ./spec/admin/posts_spec.rb:62 # Admin::PostsController PUT #update with invalid parameters does not update the post if title is too long
+# rspec ./spec/admin/posts_spec.rb:68 # Admin::PostsController PUT #update with invalid parameters does not update the post if content is too short
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Et numquam atque consequatur."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 6.17 seconds (files took 29.22 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Et qui rerum earum."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 3.61 seconds (files took 21.63 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001c86e891c90>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001c86ebb5200>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001c86ec3ce58>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001c86ec34cf8>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.24069 seconds (files took 21.61 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:10 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:20 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:32 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:43 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+
+# RSpec is shutting down and will print the summary report... Interrupt again to force quit (warning: at_exit hooks will be skipped if you force quit).
+# Terminate batch job (Y/N)?
+# ^C
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Ratione fugiat et sit."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 4.25 seconds (files took 31.54 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# FFFFF.F
+
+# Failures:
+
+#   1) Admin::CommentsController GET#index shows all data
+#      Failure/Error: get :index
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:12:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::CommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::CommentsController POST#new creates a address
+#      Failure/Error: post :new, params: params
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"new", :content=>"Nice to be...!", :controller=>"admin/comments", :post_id=>1}
+#      # ./spec/admin/comments_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::CommentsController GET #edit renders the edit template
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:37:in `block (3 levels) in <top (required)>'
+
+#   5) Admin::CommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:42:in `block (3 levels) in <top (required)>'
+
+#   6) Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: delete :destroy, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+# Finished in 1.11 seconds (files took 29.37 seconds to load)
+# 7 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:11 # Admin::CommentsController GET#index shows all data
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::CommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::CommentsController POST#new creates a address
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::CommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:41 # Admin::CommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:52 # Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rails routes
+#                                   Prefix Verb       URI Pattern                                                                                       Controller#Action
+#                   new_admin_user_session GET        /admin/login(.:format)                                                                            active_admin/devise/sessions#new
+#                       admin_user_session POST       /admin/login(.:format)                                                                            active_admin/devise/sessions#create
+#               destroy_admin_user_session DELETE|GET /admin/logout(.:format)                                                                           active_admin/devise/sessions#destroy
+#                  new_admin_user_password GET        /admin/password/new(.:format)                                                                     active_admin/devise/passwords#new
+#                 edit_admin_user_password GET        /admin/password/edit(.:format)                                                                    active_admin/devise/passwords#edit
+#                      admin_user_password PATCH      /admin/password(.:format)                                                                         active_admin/devise/passwords#update
+#                                          PUT        /admin/password(.:format)                                                                         active_admin/devise/passwords#update
+#                                          POST       /admin/password(.:format)                                                                         active_admin/devise/passwords#create
+#                               admin_root GET        /admin(.:format)                                                                                  admin/dashboard#index
+#           batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format)                                                         admin/admin_users#batch_action
+#                        admin_admin_users GET        /admin/admin_users(.:format)                                                                      admin/admin_users#index
+#                                          POST       /admin/admin_users(.:format)                                                                      admin/admin_users#create
+#                     new_admin_admin_user GET        /admin/admin_users/new(.:format)                                                                  admin/admin_users#new
+#                    edit_admin_admin_user GET        /admin/admin_users/:id/edit(.:format)                                                             admin/admin_users#edit
+#                         admin_admin_user GET        /admin/admin_users/:id(.:format)                                                                  admin/admin_users#show
+#                                          PATCH      /admin/admin_users/:id(.:format)                                                                  admin/admin_users#update
+#                                          PUT        /admin/admin_users/:id(.:format)                                                                  admin/admin_users#update
+#                                          DELETE     /admin/admin_users/:id(.:format)                                                                  admin/admin_users#destroy
+#         batch_action_admin_post_comments POST       /admin/post_comments/batch_action(.:format)                                                       admin/post_comments#batch_action
+#                      admin_post_comments GET        /admin/post_comments(.:format)                                                                    admin/post_comments#index
+#                                          POST       /admin/post_comments(.:format)                                                                    admin/post_comments#create
+#                   new_admin_post_comment GET        /admin/post_comments/new(.:format)                                                                admin/post_comments#new
+#                  edit_admin_post_comment GET        /admin/post_comments/:id/edit(.:format)                                                           admin/post_comments#edit
+#                       admin_post_comment GET        /admin/post_comments/:id(.:format)                                                                admin/post_comments#show
+#                                          PATCH      /admin/post_comments/:id(.:format)                                                                admin/post_comments#update
+#                                          PUT        /admin/post_comments/:id(.:format)                                                                admin/post_comments#update
+#                                          DELETE     /admin/post_comments/:id(.:format)                                                                admin/post_comments#destroy
+#                          admin_dashboard GET        /admin/dashboard(.:format)                                                                        admin/dashboard#index
+#                 batch_action_admin_posts POST       /admin/posts/batch_action(.:format)                                                               admin/posts#batch_action
+#                              admin_posts GET        /admin/posts(.:format)                                                                            admin/posts#index
+#                                          POST       /admin/posts(.:format)                                                                            admin/posts#create
+#                           new_admin_post GET        /admin/posts/new(.:format)                                                                        admin/posts#new
+#                          edit_admin_post GET        /admin/posts/:id/edit(.:format)                                                                   admin/posts#edit
+#                               admin_post GET        /admin/posts/:id(.:format)                                                                        admin/posts#show
+#                                          PATCH      /admin/posts/:id(.:format)                                                                        admin/posts#update
+#                                          PUT        /admin/posts/:id(.:format)                                                                        admin/posts#update
+#                                          DELETE     /admin/posts/:id(.:format)                                                                        admin/posts#destroy
+#                           admin_comments GET        /admin/comments(.:format)                                                                         admin/comments#index
+#                                          POST       /admin/comments(.:format)                                                                         admin/comments#create
+#                            admin_comment GET        /admin/comments/:id(.:format)                                                                     admin/comments#show
+#                                          DELETE     /admin/comments/:id(.:format)                                                                     admin/comments#destroy
+#                     api_v1_post_comments POST       /api/v1/posts/:post_id/comments(.:format)                                                         api/v1/comments#create
+#                      api_v1_post_comment DELETE     /api/v1/posts/:post_id/comments/:id(.:format)                                                     api/v1/comments#destroy
+#                             api_v1_posts GET        /api/v1/posts(.:format)                                                                           api/v1/posts#index
+#                                          POST       /api/v1/posts(.:format)                                                                           api/v1/posts#create
+#                          new_api_v1_post GET        /api/v1/posts/new(.:format)                                                                       api/v1/posts#new
+#                         edit_api_v1_post GET        /api/v1/posts/:id/edit(.:format)                                                                  api/v1/posts#edit
+#                              api_v1_post GET        /api/v1/posts/:id(.:format)                                                                       api/v1/posts#show
+#                                          PATCH      /api/v1/posts/:id(.:format)                                                                       api/v1/posts#update
+#                                          PUT        /api/v1/posts/:id(.:format)                                                                       api/v1/posts#update
+#                                          DELETE     /api/v1/posts/:id(.:format)                                                                       api/v1/posts#destroy
+#         turbo_recede_historical_location GET        /recede_historical_location(.:format)                                                             turbo/native/navigation#recede
+#         turbo_resume_historical_location GET        /resume_historical_location(.:format)                                                             turbo/native/navigation#resume
+#        turbo_refresh_historical_location GET        /refresh_historical_location(.:format)                                                            turbo/native/navigation#refresh
+#            rails_postmark_inbound_emails POST       /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
+#               rails_relay_inbound_emails POST       /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
+#            rails_sendgrid_inbound_emails POST       /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create
+#      rails_mandrill_inbound_health_check GET        /rails/action_mailbox/mandrill/inbound_emails(.:format)                                           action_mailbox/ingresses/mandrill/inbound_emails#health_check
+#            rails_mandrill_inbound_emails POST       /rails/action_mailbox/mandrill/inbound_emails(.:format)                                           action_mailbox/ingresses/mandrill/inbound_emails#create
+#             rails_mailgun_inbound_emails POST       /rails/action_mailbox/mailgun/inbound_emails/mime(.:format)                                       action_mailbox/ingresses/mailgun/inbound_emails#create
+#           rails_conductor_inbound_emails GET        /rails/conductor/action_mailbox/inbound_emails(.:format)                                          rails/conductor/action_mailbox/inbound_emails#index
+#                                          POST       /rails/conductor/action_mailbox/inbound_emails(.:format)                                          rails/conductor/action_mailbox/inbound_emails#create
+#        new_rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/new(.:format)                                      rails/conductor/action_mailbox/inbound_emails#new
+#       edit_rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/:id/edit(.:format)                                 rails/conductor/action_mailbox/inbound_emails#edit
+#            rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#show
+#                                          PATCH      /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#update
+#                                          PUT        /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#update
+#                                          DELETE     /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#destroy
+# new_rails_conductor_inbound_email_source GET        /rails/conductor/action_mailbox/inbound_emails/sources/new(.:format)                              rails/conductor/action_mailbox/inbound_emails/sources#new
+#    rails_conductor_inbound_email_sources POST       /rails/conductor/action_mailbox/inbound_emails/sources(.:format)                                  rails/conductor/action_mailbox/inbound_emails/sources#create
+#    rails_conductor_inbound_email_reroute POST       /rails/conductor/action_mailbox/:inbound_email_id/reroute(.:format)                               rails/conductor/action_mailbox/reroutes#create
+# rails_conductor_inbound_email_incinerate POST       /rails/conductor/action_mailbox/:inbound_email_id/incinerate(.:format)                            rails/conductor/action_mailbox/incinerates#create
+#                       rails_service_blob GET        /rails/active_storage/blobs/redirect/:signed_id/*filename(.:format)                               active_storage/blobs/redirect#show
+#                 rails_service_blob_proxy GET        /rails/active_storage/blobs/proxy/:signed_id/*filename(.:format)                                  active_storage/blobs/proxy#show
+#                                          GET        /rails/active_storage/blobs/:signed_id/*filename(.:format)                                        active_storage/blobs/redirect#show
+#                rails_blob_representation GET        /rails/active_storage/representations/redirect/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations/redirect#show
+#          rails_blob_representation_proxy GET        /rails/active_storage/representations/proxy/:signed_blob_id/:variation_key/*filename(.:format)    active_storage/representations/proxy#show
+#                                          GET        /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format)          active_storage/representations/redirect#show
+#                       rails_disk_service GET        /rails/active_storage/disk/:encoded_key/*filename(.:format)                                       active_storage/disk#show
+#                update_rails_disk_service PUT        /rails/active_storage/disk/:encoded_token(.:format)                                               active_storage/disk#update
+#                     rails_direct_uploads POST       /rails/active_storage/direct_uploads(.:format)                                                    active_storage/direct_uploads#create
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb:24
+# Run options: include {:locations=>{"./spec/admin/comments_spec.rb"=>[24]}}
+# F
+
+# Failures:
+
+#   1) Admin::CommentsController POST#new creates a address
+#      Failure/Error: post :create, params: params
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.48873 seconds (files took 25.76 seconds to load)
+# 1 example, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::CommentsController POST#new creates a address
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# FFFFF.F
+
+# Failures:
+
+#   1) Admin::CommentsController GET#index shows all data
+#      Failure/Error: get :index
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:12:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::CommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::CommentsController POST#new creates a address
+#      Failure/Error: post :create, params: params
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::CommentsController GET #edit renders the edit template
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:37:in `block (3 levels) in <top (required)>'
+
+#   5) Admin::CommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:42:in `block (3 levels) in <top (required)>'
+
+#   6) Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: delete :destroy, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+# Finished in 1.35 seconds (files took 32.15 seconds to load)
+# 7 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:11 # Admin::CommentsController GET#index shows all data
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::CommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::CommentsController POST#new creates a address
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::CommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:41 # Admin::CommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:52 # Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# FFF[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|       expect(response).to have_http_status(201)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to render_template(:edit)
+#     40|     end
+#     41|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (ruby)  @comment
+# #<Comment:0x000002ad4b3fd360
+#  id: 1,
+#  post_id: 2,
+#  content: "Consequatur inventore perspiciatis. Earum ad illum. In omnis molestiae.",
+#  created_at: Mon, 11 Mar 2024 11:17:44.319219000 UTC +00:00,
+#  updated_at: Mon, 11 Mar 2024 11:17:44.319219000 UTC +00:00>
+# (ruby)  @comment.id
+# 1
+# (ruby)  put :update, params: { id: @comment.id }
+# eval error: No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/journey/formatter.rb:44:in `path'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:824:in `url_for'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:797:in `path_for'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:771:in `generate_extras'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:568:in `setup_request'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:510:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rails-controller-testing-1.0.5/lib/rails/controller/testing/template_assertions.rb:62:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:35:in `block in process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:104:in `catch'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:104:in `_catch_warden'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:35:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:424:in `put'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rails-controller-testing-1.0.5/lib/rails/controller/testing/integration.rb:16:in `block (2 levels) in <module:Integration>'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby)  put :update, params: { id: @comment.id }
+# eval error: No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/journey/formatter.rb:44:in `path'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:824:in `url_for'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:797:in `path_for'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_dispatch/routing/route_set.rb:771:in `generate_extras'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:568:in `setup_request'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:510:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rails-controller-testing-1.0.5/lib/rails/controller/testing/template_assertions.rb:62:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:35:in `block in process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:104:in `catch'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:104:in `_catch_warden'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/devise-4.9.3/lib/devise/test/controller_helpers.rb:35:in `process'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/actionpack-7.0.8.1/lib/action_controller/test_case.rb:424:in `put'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rails-controller-testing-1.0.5/lib/rails/controller/testing/integration.rb:16:in `block (2 levels) in <module:Integration>'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# FF.F
+
+# Failures:
+
+#   1) Admin::CommentsController GET#index shows all data
+#      Failure/Error: get :index
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:12:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::CommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::CommentsController POST#new creates a address
+#      Failure/Error: post :create, params: params
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:31:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::CommentsController GET #edit renders the edit template
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:38:in `block (3 levels) in <top (required)>'
+
+#   5) Admin::CommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: put :update, params: { id: @comment.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"update", :controller=>"admin/comments", :id=>1}
+#      # ./spec/admin/comments_spec.rb:43:in `block (3 levels) in <top (required)>'
+
+#   6) Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: delete :destroy, params: { id: @comment.id }
+
+#      ActiveRecord::StatementInvalid:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:54:in `block (3 levels) in <top (required)>'
+
+# Finished in 11 minutes 52 seconds (files took 27.05 seconds to load)
+# 7 examples, 6 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:11 # Admin::CommentsController GET#index shows all data
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::CommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::CommentsController POST#new creates a address
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::CommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:42 # Admin::CommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:53 # Admin::CommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app>
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .FF[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|       expect(response).to have_http_status(201)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to render_template(:edit)
+#     40|     end
+#     41|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# FF.F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController POST#new creates a address
+#      Failure/Error: expect(response).to have_http_status(201)
+#        expected the response to have status code 201 but it was 200
+#      # ./spec/admin/comments_spec.rb:32:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::PostCommentsController GET #edit renders the edit template
+#      Failure/Error: expect(response).to render_template(:edit)
+#        expecting <"edit"> but was a redirect to <http://test.host/admin/post_comments/1>
+#      # ./spec/admin/comments_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: expect(assigns(:comment)).to eq(@comment)
+
+#        expected: #<Comment id: 1, post_id: 2, content: "Non neque quaerat. Ex libero nam. Necessitatibus v...", created_at: "2024-03-11 11:30:09.161913000 +0000", updated_at: "2024-03-11 11:30:09.161913000 +0000">
+#             got: nil
+
+#        (compared using ==)
+#      # ./spec/admin/comments_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+#   5) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+# Finished in 7.76 seconds (files took 27.52 seconds to load)
+# 7 examples, 5 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:30 # Admin::PostCommentsController POST#new creates a address
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::PostCommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:42 # Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:53 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F.[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|       expect(response).to have_http_status(200)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to render_template(:edit)
+#     40|     end
+#     41|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (ruby)  put :update, params: { id: @comment.id }
+# #<ActionDispatch::TestResponse:0x00000249a619d2b8
+#  @cache_control={},
+#  @committed=true,
+#  @cv=#<MonitorMixin::ConditionVariable:0x00000249a6e435a8 @cond=#<Thread::ConditionVariable:0x00000249a6e43580>, @monitor=#<Monitor:0x00000249a6e43620>>,
+#  @header=
+#   {"X-Frame-Options"=>"SAMEORIGIN",
+#    "X-XSS-Protection"=>"0",
+#    "X-Content-Type-Options"=>"nosniff",
+#    "X-Download-Options"=>"noopen",
+#    "X-Permitted-Cross-Domain-Policies"=>"none",
+#    "Referrer-Policy"=>"strict-origin-when-cross-origin",
+#    "Location"=>"http://test.host/admin/post_comments/1",
+#    "Content-Type"=>"text/html; charset=utf-8"},
+#  @mon_data=#<Monitor:0x00000249a6e43620>,
+#  @mon_data_owner_object_id=35300,
+#  @request=#<ActionController::TestRequest PUT "http://test.host/admin/post_comments/1" for 0.0.0.0>,
+#  @sending=false,
+#  @sent=true,
+#  @status=302,
+#  @stream=
+#   #<ActionDispatch::Response::Buffer:0x00000249a58206e0
+#    @buf=["<html><body>You are being <a href=\"http://test.host/admin/post_comments/1\">redirected</a>.</body></html>"],
+#    @closed=false,
+#    @response=#<ActionDispatch::TestResponse:0x00000249a619d2b8 ...>,
+#    @str_body=nil>>
+# (ruby) render_template
+# eval error: wrong number of arguments (given 0, expected 1..2)
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-rails-6.1.1/lib/rspec/rails/matchers/have_rendered.rb:56:in `have_rendered'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) response
+# #<ActionDispatch::TestResponse:0x00000249a619d2b8
+#  @cache_control={},
+#  @committed=true,
+#  @cv=#<MonitorMixin::ConditionVariable:0x00000249a6e435a8 @cond=#<Thread::ConditionVariable:0x00000249a6e43580>, @monitor=#<Monitor:0x00000249a6e43620>>,
+#  @header=
+#   {"X-Frame-Options"=>"SAMEORIGIN",
+#    "X-XSS-Protection"=>"0",
+#    "X-Content-Type-Options"=>"nosniff",
+#    "X-Download-Options"=>"noopen",
+#    "X-Permitted-Cross-Domain-Policies"=>"none",
+#    "Referrer-Policy"=>"strict-origin-when-cross-origin",
+#    "Location"=>"http://test.host/admin/post_comments/1",
+#    "Content-Type"=>"text/html; charset=utf-8"},
+#  @mon_data=#<Monitor:0x00000249a6e43620>,
+#  @mon_data_owner_object_id=35300,
+#  @request=#<ActionController::TestRequest PUT "http://test.host/admin/post_comments/1" for 0.0.0.0>,
+#  @sending=false,
+#  @sent=true,
+#  @status=302,
+#  @stream=
+#   #<ActionDispatch::Response::Buffer:0x00000249a58206e0
+#    @buf=["<html><body>You are being <a href=\"http://test.host/admin/post_comments/1\">redirected</a>.</body></html>"],
+#    @closed=false,
+#    @response=#<ActionDispatch::TestResponse:0x00000249a619d2b8 ...>,
+#    @str_body=nil>>
+# (rdbg)
+
+# ^C
+# (rdbg)
+# (ruby) expect(response).to redirect_to(admin_post_comment_path(@comment))
+# true
+# (rdbg) c    # continue command
+# FF.F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController GET #edit renders the edit template
+#      Failure/Error: expect(response).to redirect_to(admin_post_comment_path(@comment))
+#        expecting <"edit"> but was a redirect to <http://test.host/admin/post_comments/1>
+#      # ./spec/admin/comments_spec.rb:39:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: expect(assigns(:comment)).to eq(@comment)
+
+#        expected: #<Comment id: 1, post_id: 2, content: "Veritatis explicabo qui. Ea nihil id. Cum voluptat...", created_at: "2024-03-11 11:36:03.717340000 +0000", updated_at: "2024-03-11 11:36:03.717340000 +0000">
+#             got: nil
+
+#        (compared using ==)
+#      # ./spec/admin/comments_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+# Finished in 4 minutes 5.1 seconds (files took 23.12 seconds to load)
+# 7 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:36 # Admin::PostCommentsController GET #edit renders the edit template
+# rspec ./spec/admin/comments_spec.rb:42 # Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:53 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# Terminate batch job (Y/N)? y
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F.[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|         expect(response).to have_http_status(200)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to redirect_to(admin_post_comment_path(@comment))
+#     40|     end
+#     41|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# .F.F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+#      Failure/Error: expect(assigns(:comment)).to eq(@comment)
+
+#        expected: #<Comment id: 1, post_id: 2, content: "Et et voluptates. Voluptas sapiente est. Atque cor...", created_at: "2024-03-11 11:36:46.730659000 +0000", updated_at: "2024-03-11 11:36:46.730659000 +0000">
+#             got: nil
+
+#        (compared using ==)
+#      # ./spec/admin/comments_spec.rb:44:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:55:in `block (3 levels) in <top (required)>'
+
+# Finished in 11.23 seconds (files took 27.6 seconds to load)
+# 7 examples, 3 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:42 # Admin::PostCommentsController GET #edit assigns the requested comment as @comment
+# rspec ./spec/admin/comments_spec.rb:53 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F.[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|         expect(response).to have_http_status(200)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to redirect_to(admin_post_comment_path(@comment))
+#     40|     end
+#     41|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# ..F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:50:in `block (3 levels) in <top (required)>'
+
+# Finished in 7.3 seconds (files took 26.66 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:48 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F.[32, 41] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     32|         expect(response).to have_http_status(200)
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+# =>  37|       debugger
+#     38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to redirect_to(admin_post_comment_path(@comment))
+#     40|     end
+#     41|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:37
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg)
+# (rdbg) n    # next command
+# [33, 42] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     33|     end
+#     34|   end
+#     35|   describe 'GET #edit' do
+#     36|     it 'renders the edit template' do
+#     37|       debugger
+# =>  38|       put :update, params: { id: @comment.id }
+#     39|       expect(response).to redirect_to(admin_post_comment_path(@comment))
+#     40|     end
+#     41|   end
+#     42|   describe 'DELETE #destroy' do
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:38
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# ..F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:50:in `block (3 levels) in <top (required)>'
+
+# Finished in 24.03 seconds (files took 29.41 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:48 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F...[43, 52] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     43|       expect {
+#     44|         delete :destroy, params: { id: @comment.id }
+#     45|       }
+#     46|     end
+#     47|     it 'redirects to the index page after successful deletion' do
+# =>  48|       debugger
+#     49|       delete :destroy, params: { id: @comment.id }
+#     50|       expect(response).to redirect_to(admin_comments_path)
+#     51|     end
+#     52|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:48
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) delete :destroy, params: { id: @comment.id }    # command
+# (rdbg)
+# (rdbg) response
+# #<ActionDispatch::TestResponse:0x0000022b36522818
+#  @cache_control={},
+#  @committed=false,
+#  @cv=#<MonitorMixin::ConditionVariable:0x0000022b374d45e0 @cond=#<Thread::ConditionVariable:0x0000022b374d45b8>, @monitor=#<Monitor:0x0000022b374d4658>>,
+#  @header=
+#   {"X-Frame-Options"=>"SAMEORIGIN",
+#    "X-XSS-Protection"=>"0",
+#    "X-Content-Type-Options"=>"nosniff",
+#    "X-Download-Options"=>"noopen",
+#    "X-Permitted-Cross-Domain-Policies"=>"none",
+#    "Referrer-Policy"=>"strict-origin-when-cross-origin"},
+#  @mon_data=#<Monitor:0x0000022b374d4658>,
+#  @mon_data_owner_object_id=24420,
+#  @request=#<ActionController::TestRequest GET "http://test.host" for 0.0.0.0>,
+#  @sending=false,
+#  @sent=false,
+#  @status=200,
+#  @stream=#<ActionDispatch::Response::Buffer:0x0000022b36582858 @buf=[], @closed=false, @response=#<ActionDispatch::TestResponse:0x0000022b36522818 ...>, @str_body=nil>>
+# (rdbg)
+
+# ^C
+# (ruby) expect(response).to redirect_to(admin_post_comments_path)
+# eval error: Expected response to be a <3XX: redirect>, but was a <200: OK>
+# Response body:
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:110:in `block in <module:Support>'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:119:in `notify_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/fail_with.rb:35:in `fail_with'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:40:in `handle_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:56:in `block in handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:101:in `to'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby) expect(response).to redirect_to(admin_post_comments_path(@comment))
+# eval error: Expected response to be a <3XX: redirect>, but was a <200: OK>
+# Response body:
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:110:in `block in <module:Support>'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:119:in `notify_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/fail_with.rb:35:in `fail_with'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:40:in `handle_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:56:in `block in handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:101:in `to'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby) expect(response).to redirect_to(admin_post_comments_path(@comments))
+# eval error: Expected response to be a <3XX: redirect>, but was a <200: OK>
+# Response body:
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:110:in `block in <module:Support>'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:119:in `notify_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/fail_with.rb:35:in `fail_with'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:40:in `handle_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:56:in `block in handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:101:in `to'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby) expect(response).to redirect_to(admin_post_comments_path(@comment))
+# eval error: Expected response to be a <3XX: redirect>, but was a <200: OK>
+# Response body:
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:110:in `block in <module:Support>'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-support-3.13.1/lib/rspec/support.rb:119:in `notify_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/fail_with.rb:35:in `fail_with'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:40:in `handle_failure'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:56:in `block in handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:27:in `with_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/handler.rb:48:in `handle_matcher'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:65:in `to'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/expectations/expectation_target.rb:101:in `to'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg)
+# (rdbg)
+# (ruby) admin_post_comments_path
+# "/admin/post_comments"
+# (rdbg) c    # continue command
+# F
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+#      Failure/Error: expect(response).to redirect_to(admin_post_comments_path)
+
+#        Expected response to be a redirect to <http://test.host/admin/comments> but was a redirect to <http://test.host/admin/post_comments>.
+#        Expected "http://test.host/admin/comments" to be === "http://test.host/admin/post_comments".
+#      # ./spec/admin/comments_spec.rb:50:in `block (3 levels) in <top (required)>'
+
+# Finished in 3 minutes 52.9 seconds (files took 21.82 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/comments_spec.rb:47 # Admin::PostCommentsController DELETE #destroy redirects to the index page after successful deletion
+
+# Terminate batch job (Y/N)? y
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F...[43, 52] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     43|       expect {
+#     44|         delete :destroy, params: { id: @comment.id }
+#     45|       }
+#     46|     end
+#     47|     it 'redirects to the index page after successful deletion' do
+# =>  48|       debugger
+#     49|       delete :destroy, params: { id: @comment.id }
+#     50|       expect(response).to redirect_to(admin_post_comments_path)
+#     51|     end
+#     52|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:48
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) n    # next command
+# [44, 53] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     44|         delete :destroy, params: { id: @comment.id }
+#     45|       }
+#     46|     end
+#     47|     it 'redirects to the index page after successful deletion' do
+#     48|       debugger
+# =>  49|       delete :destroy, params: { id: @comment.id }
+#     50|       expect(response).to redirect_to(admin_post_comments_path)
+#     51|     end
+#     52|   end
+#     53| end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:49
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) n    # next command
+# [45, 53] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     45|       }
+#     46|     end
+#     47|     it 'redirects to the index page after successful deletion' do
+#     48|       debugger
+#     49|       delete :destroy, params: { id: @comment.id }
+# =>  50|       expect(response).to redirect_to(admin_post_comments_path)
+#     51|     end
+#     52|   end
+#     53| end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:50
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) n    # next command
+# [46, 53] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     46|     end
+#     47|     it 'redirects to the index page after successful deletion' do
+#     48|       debugger
+#     49|       delete :destroy, params: { id: @comment.id }
+#     50|       expect(response).to redirect_to(admin_post_comments_path)
+# =>  51|     end
+#     52|   end
+#     53| end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:51 #=> true
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# .
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+# Finished in 22.93 seconds (files took 21.72 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .[14, 23] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     14|     end
+#     15|   end
+#     16|
+#     17|   describe 'GET#show' do
+#     18|     it 'show categories details' do
+# =>  19|       debugger
+#     20|       get :show, params: { id: @comment.id }
+#     21|       expect(response).to have_http_status(200)
+#     22|     end
+#     23|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:19
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (ruby)  get :show, params: { id: @comment.id }
+# eval error: Could not find table 'active_admin_comments'
+# nil
+# (rdbg) c    # continue command
+# F....
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+# Finished in 30 minutes 24 seconds (files took 26.75 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .[14, 23] in ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb
+#     14|     end
+#     15|   end
+#     16|
+#     17|   describe 'GET#show' do
+#     18|     it 'show categories details' do
+# =>  19|       debugger
+#     20|       get :show, params: { id: @comment.id }
+#     21|       expect(response).to have_http_status(200)
+#     22|     end
+#     23|   end
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/comments_spec.rb:19
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:263
+#   # and 43 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F....
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: expect(response).to have_http_status(200)
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+# Finished in 19 minutes 13 seconds (files took 30.64 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F....
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+# Finished in 3.95 seconds (files took 27.25 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Ut sed sit ea."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 3.41 seconds (files took 22.15 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post

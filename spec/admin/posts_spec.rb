@@ -16,7 +16,7 @@ RSpec.describe Admin::PostsController, type: :controller do
   end
   describe 'GET#show' do
     it 'show Post details' do
-      debugger
+      
       get :show, params: { id: @post.id }
       expect(response).to have_http_status(200)
     end
@@ -33,7 +33,7 @@ RSpec.describe Admin::PostsController, type: :controller do
     end
   end
   describe 'PUT #update' do
-    let(:valid_attributes) { { title: 'Breweries' } }
+    let(:valid_attributes) { { title: 'Breweries', content: 'Some content longer than 10 characters' } }
     
     context 'with valid parameters' do
       it 'updates the requested post' do
