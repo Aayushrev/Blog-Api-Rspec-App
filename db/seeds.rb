@@ -6153,3 +6153,1192 @@ AdminUser.create!(email: 'user@example.com', password: '123456789', password_con
 
 # rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
 # rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+
+
+
+# Copyright (C) Microsoft Corporation. All rights reserved.
+
+# Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+# PS C:\Users\Aayush Pandey> cd .\Desktop\BlogRspec_app\
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000027068e61d80>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000027069204ed8>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002706926cd08>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000027069264ba8>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.5217 seconds (files took 1 minute 2.2 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:10 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:20 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:32 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:43 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000026daca81508>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000026dace441b8>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000026daceabf48>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000026dacea3c08>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.29076 seconds (files took 26.35 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:10 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:20 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:32 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:43 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000014483f41280>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000014484294428>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001448431c3a0>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x00000144843141a0>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.97117 seconds (files took 1 minute 44.54 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:10 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:20 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:32 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:43 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001cde6e61738>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001cde71e3f28>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001cde727bd78>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001cde7273d58>
+#      # ./spec/admin/admin_users_spec.rb:7:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.24879 seconds (files took 22.7 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:10 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:20 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:32 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:43 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# [1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (ruby)  admin_user = create(:admin_user)
+# #<AdminUser id: 1, email: "tomasa@wolff-skiles.test", created_at: "2024-03-12 07:47:00.738830000 +0000", updated_at: "2024-03-12 07:47:00.738830000 +0000">
+# (ruby)  login_as(admin_user, scope: :admin_user)
+# eval error: undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a671270>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby)  sign_in(admin_user, scope: :admin_user)
+# eval error: undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a671270>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby)  sign_in(admin_user)
+# eval error: undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a671270>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) skip
+# eval error: RSpec::Core::Pending::SkipDeclaredInExample
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/pending.rb:115:in `skip'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) skip
+# eval error: RSpec::Core::Pending::SkipDeclaredInExample
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/pending.rb:115:in `skip'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) skip
+# eval error: RSpec::Core::Pending::SkipDeclaredInExample
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/pending.rb:115:in `skip'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# *[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F
+
+# Pending: (Failures listed here are expected and do not affect your suite's status)
+
+#   1) Admin Users Admin Admin Users resource should allow editing an admin user
+#      # No reason given
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a921920>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a671270>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07aa4a798>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000001e07a477140>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Finished in 4 minutes 44.5 seconds (files took 21.56 seconds to load)
+# 4 examples, 3 failures, 1 pending
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:11 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:21 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:44 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# [1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (ruby)  admin_user = create(:admin_user)
+# #<AdminUser id: 1, email: "allena@mante.example", created_at: "2024-03-12 07:52:09.529035000 +0000", updated_at: "2024-03-12 07:52:09.529035000 +0000">
+# (ruby)  login_as(admin_user, scope: :admin_user)
+# eval error: undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000021194d31ba0>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby)  sign_in(admin_user, scope: :admin_user)
+# eval error: undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000021194d31ba0>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) skip
+# eval error: RSpec::Core::Pending::SkipDeclaredInExample
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/pending.rb:115:in `skip'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) skip
+# eval error: RSpec::Core::Pending::SkipDeclaredInExample
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/pending.rb:115:in `skip'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# *[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       admin_user = create(:admin_user) # Create an admin user
+#      8|       login_as(admin_user, scope: :admin_user) # Login as the admin user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F
+
+# Pending: (Failures listed here are expected and do not affect your suite's status)
+
+#   1) Admin Users Admin Admin Users resource should allow editing an admin user
+#      # No reason given
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x00000211951a0b50>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000021194d31ba0>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000021195123858>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: login_as(admin_user, scope: :admin_user) # Login as the admin user
+
+#      NoMethodError:
+#        undefined method `login_as' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x0000021194e3c590>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Finished in 1 minute 14.59 seconds (files took 24 seconds to load)
+# 4 examples, 3 failures, 1 pending
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:11 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:21 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:44 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# [1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe "Admin Users Admin", type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (ruby)  @admin_user =  FactoryBot.create(:admin_user)
+# #<AdminUser id: 1, email: "claire.cremin@marquardt.test", created_at: "2024-03-12 08:01:50.565699000 +0000", updated_at: "2024-03-12 08:01:50.565699000 +0000">
+# (ruby)  sign_in @admin_user
+# eval error: undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002d03c8c1770>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::AdminUsersController, type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::AdminUsersController, type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::AdminUsersController, type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F
+
+# Failures:
+
+#   1) Admin Users Admin Admin Users resource should display admin users in the index page
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002d03c8c1770>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   2) Admin Users Admin Admin Users resource should allow creating a new admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002d03cc8cc60>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   3) Admin Users Admin Admin Users resource should allow editing an admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002d03c9ce258>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   4) Admin Users Admin Admin Users resource should allow deleting an admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminUsersAdmin::AdminUsersResource:0x000002d03cae55b0>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Finished in 1 minute 44.34 seconds (files took 26.63 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:11 # Admin Users Admin Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:21 # Admin Users Admin Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:33 # Admin Users Admin Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:44 # Admin Users Admin Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# [1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::AdminUsersController, type: :feature do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (ruby) @admin_user =  FactoryBot.create(:admin_user)
+# #<AdminUser id: 1, email: "cameron.krajcik@raynor.example", created_at: "2024-03-12 08:04:03.169030000 +0000", updated_at: "2024-03-12 08:04:03.169030000 +0000">
+# (ruby) sign_in @admin_user
+# eval error: undefined method `sign_in' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002545e3d13c8>
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-expectations-3.13.0/lib/rspec/matchers.rb:968:in `method_missing'
+#   C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example_group.rb:767:in `method_missing'
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby) :AdminAdminUsersController
+# :AdminAdminUsersController
+# (ruby) AdminAdminUsersController
+# eval error: uninitialized constant AdminAdminUsersController
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (ruby) AdminUsersController
+# eval error: uninitialized constant AdminUsersController
+#   (rdbg)/C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:1:in `block (3 levels) in <top (required)>'
+# nil
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::UsersController, type: :controller do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::UsersController, type: :controller do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F[1, 10] in ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#      1| require 'rails_helper'
+#      2|
+#      3| RSpec.describe Admin::UsersController, type: :controller do
+#      4|   describe "Admin Users resource" do
+#      5|     before do
+# =>   6|       debugger
+#      7|       @admin_user =  FactoryBot.create(:admin_user)
+#      8|       sign_in @admin_user
+#      9|     end
+#     10|
+# =>#0    block in <top (required)> (3 levels) at ~/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:6
+#   #1    [C] BasicObject#instance_exec at C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/example.rb:457
+#   # and 47 frames (use `bt' command for all frames)
+# (rdbg) c    # continue command
+# F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource should display admin users in the index page
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002545e3d13c8>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::AdminUsersController Admin Users resource should allow creating a new admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002545e7b28c0>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::AdminUsersController Admin Users resource should allow editing an admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002545e715f20>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::AdminUsersController Admin Users resource should allow deleting an admin user
+#      Failure/Error: sign_in @admin_user
+
+#      NoMethodError:
+#        undefined method `sign_in' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002545e598e90>
+#      # ./spec/admin/admin_users_spec.rb:8:in `block (3 levels) in <top (required)>'
+
+# Finished in 2 minutes 52.6 seconds (files took 27.8 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:11 # Admin::AdminUsersController Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:21 # Admin::AdminUsersController Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:33 # Admin::AdminUsersController Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:44 # Admin::AdminUsersController Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+
+# An error occurred while loading ./spec/admin/admin_users_spec.rb.
+# Failure/Error:
+#   RSpec.describe Admin::UsersController, type: :controller do
+#     describe "Admin Users resource" do
+#       before do
+#         debugger
+#         @admin_user =  FactoryBot.create(:admin_user)
+#         sign_in @admin_user
+#       end
+
+#       it "should display admin users in the index page" do
+#         admin_user = create(:admin_user) # Create an admin user
+
+# NameError:
+#   uninitialized constant Admin::UsersController
+# # ./spec/admin/admin_users_spec.rb:3:in `<top (required)>'
+# No examples found.
+
+
+# Finished in 0.00016 seconds (files took 37.74 seconds to load)
+# 0 examples, 0 failures, 1 error occurred outside of examples
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+
+# An error occurred while loading ./spec/admin/admin_users_spec.rb.
+# Failure/Error:
+#   RSpec.describe AdminUsersController, type: :controller do
+#     describe "Admin Users resource" do
+#       before do
+#         @admin_user = FactoryBot.create(:admin_user)
+#         sign_in @admin_user
+#       end
+
+#       it "should display admin users in the index page" do
+#         admin_user = create(:admin_user) # Create an admin user
+#         visit admin_admin_users_path
+
+# NameError:
+#   uninitialized constant AdminUsersController
+# # ./spec/admin/admin_users_spec.rb:58:in `<top (required)>'
+# No examples found.
+
+
+# Finished in 0.00013 seconds (files took 32.95 seconds to load)
+# 0 examples, 0 failures, 1 error occurred outside of examples
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+
+# An error occurred while loading ./spec/admin/admin_users_spec.rb.
+# Failure/Error:
+#   RSpec.describe Admin::UsersController, type: :controller do
+#     describe "Admin Users resource" do
+#       before do
+#         @admin_user = FactoryBot.create(:admin_user)
+#         sign_in @admin_user
+#       end
+
+#       it "should display admin users in the index page" do
+#         admin_user = create(:admin_user) # Create an admin user
+#         visit admin_admin_users_path
+
+# NameError:
+#   uninitialized constant Admin::UsersController
+# # ./spec/admin/admin_users_spec.rb:58:in `<top (required)>'
+# No examples found.
+
+
+# Finished in 0.00022 seconds (files took 29.26 seconds to load)
+# 0 examples, 0 failures, 1 error occurred outside of examples
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# FFFF
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource should display admin users in the index page
+#      Failure/Error: visit admin_admin_users_path
+
+#      NoMethodError:
+#        undefined method `visit' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002f4e9a9ea30>
+#      # ./spec/admin/admin_users_spec.rb:67:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::AdminUsersController Admin Users resource should allow creating a new admin user
+#      Failure/Error: visit new_admin_admin_user_path
+
+#      NoMethodError:
+#        undefined method `visit' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002f4debad490>
+#      # ./spec/admin/admin_users_spec.rb:76:in `block (3 levels) in <top (required)>'
+
+#   3) Admin::AdminUsersController Admin Users resource should allow editing an admin user
+#      Failure/Error: visit edit_admin_admin_user_path(admin_user)
+
+#      NoMethodError:
+#        undefined method `visit' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002f4debac590>
+#      # ./spec/admin/admin_users_spec.rb:89:in `block (3 levels) in <top (required)>'
+
+#   4) Admin::AdminUsersController Admin Users resource should allow deleting an admin user
+#      Failure/Error: visit admin_admin_users_path
+
+#      NoMethodError:
+#        undefined method `visit' for #<RSpec::ExampleGroups::AdminAdminUsersController::AdminUsersResource:0x000002f4debaa650>
+#      # ./spec/admin/admin_users_spec.rb:100:in `block (3 levels) in <top (required)>'
+
+# Finished in 0.39011 seconds (files took 28 seconds to load)
+# 4 examples, 4 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:65 # Admin::AdminUsersController Admin Users resource should display admin users in the index page
+# rspec ./spec/admin/admin_users_spec.rb:75 # Admin::AdminUsersController Admin Users resource should allow creating a new admin user
+# rspec ./spec/admin/admin_users_spec.rb:87 # Admin::AdminUsersController Admin Users resource should allow editing an admin user
+# rspec ./spec/admin/admin_users_spec.rb:98 # Admin::AdminUsersController Admin Users resource should allow deleting an admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ..
+
+# Finished in 2.14 seconds (files took 34.13 seconds to load)
+# 2 examples, 0 failures
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ...
+
+# Finished in 1.33 seconds (files took 37.06 seconds to load)
+# 3 examples, 0 failures
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ....
+
+# Finished in 1.26 seconds (files took 36.32 seconds to load)
+# 4 examples, 0 failures
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ....F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+#      Failure/Error: delete :destory, params: { id: @admin_user.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"destory", :controller=>"admin/admin_users", :id=>1}
+#      # ./spec/admin/admin_users_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 2.33 seconds (files took 42.25 seconds to load)
+# 5 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rails routes
+#                                   Prefix Verb       URI Pattern                                                                                       Controller#Action
+#                   new_admin_user_session GET        /admin/login(.:format)                                                                            active_admin/devise/sessions#new
+#                       admin_user_session POST       /admin/login(.:format)                                                                            active_admin/devise/sessions#create
+#               destroy_admin_user_session DELETE|GET /admin/logout(.:format)                                                                           active_admin/devise/sessions#destroy
+#                  new_admin_user_password GET        /admin/password/new(.:format)                                                                     active_admin/devise/passwords#new
+#                 edit_admin_user_password GET        /admin/password/edit(.:format)                                                                    active_admin/devise/passwords#edit
+#                      admin_user_password PATCH      /admin/password(.:format)                                                                         active_admin/devise/passwords#update
+#                                          PUT        /admin/password(.:format)                                                                         active_admin/devise/passwords#update
+#                                          POST       /admin/password(.:format)                                                                         active_admin/devise/passwords#create
+#                               admin_root GET        /admin(.:format)                                                                                  admin/dashboard#index
+#           batch_action_admin_admin_users POST       /admin/admin_users/batch_action(.:format)                                                         admin/admin_users#batch_action
+#                        admin_admin_users GET        /admin/admin_users(.:format)                                                                      admin/admin_users#index
+#                                          POST       /admin/admin_users(.:format)                                                                      admin/admin_users#create
+#                     new_admin_admin_user GET        /admin/admin_users/new(.:format)                                                                  admin/admin_users#new
+#                    edit_admin_admin_user GET        /admin/admin_users/:id/edit(.:format)                                                             admin/admin_users#edit
+#                         admin_admin_user GET        /admin/admin_users/:id(.:format)                                                                  admin/admin_users#show
+#                                          PATCH      /admin/admin_users/:id(.:format)                                                                  admin/admin_users#update
+#                                          PUT        /admin/admin_users/:id(.:format)                                                                  admin/admin_users#update
+#                                          DELETE     /admin/admin_users/:id(.:format)                                                                  admin/admin_users#destroy
+#         batch_action_admin_post_comments POST       /admin/post_comments/batch_action(.:format)                                                       admin/post_comments#batch_action
+#                      admin_post_comments GET        /admin/post_comments(.:format)                                                                    admin/post_comments#index
+#                                          POST       /admin/post_comments(.:format)                                                                    admin/post_comments#create
+#                   new_admin_post_comment GET        /admin/post_comments/new(.:format)                                                                admin/post_comments#new
+#                  edit_admin_post_comment GET        /admin/post_comments/:id/edit(.:format)                                                           admin/post_comments#edit
+#                       admin_post_comment GET        /admin/post_comments/:id(.:format)                                                                admin/post_comments#show
+#                                          PATCH      /admin/post_comments/:id(.:format)                                                                admin/post_comments#update
+#                                          PUT        /admin/post_comments/:id(.:format)                                                                admin/post_comments#update
+#                                          DELETE     /admin/post_comments/:id(.:format)                                                                admin/post_comments#destroy
+#                          admin_dashboard GET        /admin/dashboard(.:format)                                                                        admin/dashboard#index
+#                 batch_action_admin_posts POST       /admin/posts/batch_action(.:format)                                                               admin/posts#batch_action
+#                              admin_posts GET        /admin/posts(.:format)                                                                            admin/posts#index
+#                                          POST       /admin/posts(.:format)                                                                            admin/posts#create
+#                           new_admin_post GET        /admin/posts/new(.:format)                                                                        admin/posts#new
+#                          edit_admin_post GET        /admin/posts/:id/edit(.:format)                                                                   admin/posts#edit
+#                               admin_post GET        /admin/posts/:id(.:format)                                                                        admin/posts#show
+#                                          PATCH      /admin/posts/:id(.:format)                                                                        admin/posts#update
+#                                          PUT        /admin/posts/:id(.:format)                                                                        admin/posts#update
+#                                          DELETE     /admin/posts/:id(.:format)                                                                        admin/posts#destroy
+#                           admin_comments GET        /admin/comments(.:format)                                                                         admin/comments#index
+#                                          POST       /admin/comments(.:format)                                                                         admin/comments#create
+#                            admin_comment GET        /admin/comments/:id(.:format)                                                                     admin/comments#show
+#                                          DELETE     /admin/comments/:id(.:format)                                                                     admin/comments#destroy
+#                     api_v1_post_comments POST       /api/v1/posts/:post_id/comments(.:format)                                                         api/v1/comments#create
+#                      api_v1_post_comment DELETE     /api/v1/posts/:post_id/comments/:id(.:format)                                                     api/v1/comments#destroy
+#                             api_v1_posts GET        /api/v1/posts(.:format)                                                                           api/v1/posts#index
+#                                          POST       /api/v1/posts(.:format)                                                                           api/v1/posts#create
+#                          new_api_v1_post GET        /api/v1/posts/new(.:format)                                                                       api/v1/posts#new
+#                         edit_api_v1_post GET        /api/v1/posts/:id/edit(.:format)                                                                  api/v1/posts#edit
+#                              api_v1_post GET        /api/v1/posts/:id(.:format)                                                                       api/v1/posts#show
+#                                          PATCH      /api/v1/posts/:id(.:format)                                                                       api/v1/posts#update
+#                                          PUT        /api/v1/posts/:id(.:format)                                                                       api/v1/posts#update
+#                                          DELETE     /api/v1/posts/:id(.:format)                                                                       api/v1/posts#destroy
+#         turbo_recede_historical_location GET        /recede_historical_location(.:format)                                                             turbo/native/navigation#recede
+#         turbo_resume_historical_location GET        /resume_historical_location(.:format)                                                             turbo/native/navigation#resume
+#        turbo_refresh_historical_location GET        /refresh_historical_location(.:format)                                                            turbo/native/navigation#refresh
+#            rails_postmark_inbound_emails POST       /rails/action_mailbox/postmark/inbound_emails(.:format)                                           action_mailbox/ingresses/postmark/inbound_emails#create
+#               rails_relay_inbound_emails POST       /rails/action_mailbox/relay/inbound_emails(.:format)                                              action_mailbox/ingresses/relay/inbound_emails#create
+#            rails_sendgrid_inbound_emails POST       /rails/action_mailbox/sendgrid/inbound_emails(.:format)                                           action_mailbox/ingresses/sendgrid/inbound_emails#create
+#      rails_mandrill_inbound_health_check GET        /rails/action_mailbox/mandrill/inbound_emails(.:format)                                           action_mailbox/ingresses/mandrill/inbound_emails#health_check
+#            rails_mandrill_inbound_emails POST       /rails/action_mailbox/mandrill/inbound_emails(.:format)                                           action_mailbox/ingresses/mandrill/inbound_emails#create
+#             rails_mailgun_inbound_emails POST       /rails/action_mailbox/mailgun/inbound_emails/mime(.:format)                                       action_mailbox/ingresses/mailgun/inbound_emails#create
+#           rails_conductor_inbound_emails GET        /rails/conductor/action_mailbox/inbound_emails(.:format)                                          rails/conductor/action_mailbox/inbound_emails#index
+#                                          POST       /rails/conductor/action_mailbox/inbound_emails(.:format)                                          rails/conductor/action_mailbox/inbound_emails#create
+#        new_rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/new(.:format)                                      rails/conductor/action_mailbox/inbound_emails#new
+#       edit_rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/:id/edit(.:format)                                 rails/conductor/action_mailbox/inbound_emails#edit
+#            rails_conductor_inbound_email GET        /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#show
+#                                          PATCH      /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#update
+#                                          PUT        /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#update
+#                                          DELETE     /rails/conductor/action_mailbox/inbound_emails/:id(.:format)                                      rails/conductor/action_mailbox/inbound_emails#destroy
+# new_rails_conductor_inbound_email_source GET        /rails/conductor/action_mailbox/inbound_emails/sources/new(.:format)                              rails/conductor/action_mailbox/inbound_emails/sources#new
+#    rails_conductor_inbound_email_sources POST       /rails/conductor/action_mailbox/inbound_emails/sources(.:format)                                  rails/conductor/action_mailbox/inbound_emails/sources#create
+#    rails_conductor_inbound_email_reroute POST       /rails/conductor/action_mailbox/:inbound_email_id/reroute(.:format)                               rails/conductor/action_mailbox/reroutes#create
+# rails_conductor_inbound_email_incinerate POST       /rails/conductor/action_mailbox/:inbound_email_id/incinerate(.:format)                            rails/conductor/action_mailbox/incinerates#create
+#                       rails_service_blob GET        /rails/active_storage/blobs/redirect/:signed_id/*filename(.:format)                               active_storage/blobs/redirect#show
+#                 rails_service_blob_proxy GET        /rails/active_storage/blobs/proxy/:signed_id/*filename(.:format)                                  active_storage/blobs/proxy#show
+#                                          GET        /rails/active_storage/blobs/:signed_id/*filename(.:format)                                        active_storage/blobs/redirect#show
+#                rails_blob_representation GET        /rails/active_storage/representations/redirect/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations/redirect#show
+#          rails_blob_representation_proxy GET        /rails/active_storage/representations/proxy/:signed_blob_id/:variation_key/*filename(.:format)    active_storage/representations/proxy#show
+#                                          GET        /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format)          active_storage/representations/redirect#show
+#                       rails_disk_service GET        /rails/active_storage/disk/:encoded_key/*filename(.:format)                                       active_storage/disk#show
+#                update_rails_disk_service PUT        /rails/active_storage/disk/:encoded_token(.:format)                                               active_storage/disk#update
+#                     rails_direct_uploads POST       /rails/active_storage/direct_uploads(.:format)                                                    active_storage/direct_uploads#create
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ....F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+#      Failure/Error: delete :delete, params: { id: @admin_user.id }
+
+#      ActionController::UrlGenerationError:
+#        No route matches {:action=>"delete", :controller=>"admin/admin_users", :id=>1}
+#      # ./spec/admin/admin_users_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 1.63 seconds (files took 32.12 seconds to load)
+# 5 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ....F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+#      Failure/Error: expect(response).to have_http_status(200)
+#        expected the response to have status code 200 but it was 302
+#      # ./spec/admin/admin_users_spec.rb:43:in `block (4 levels) in <top (required)>'
+
+# Finished in 1.33 seconds (files took 27.63 seconds to load)
+# 5 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource DELETE#delete delete admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ....F.
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+#      Failure/Error: expect(response).to have_http_status(200)
+#        expected the response to have status code 200 but it was 302
+#      # ./spec/admin/admin_users_spec.rb:43:in `block (4 levels) in <top (required)>'
+
+# Finished in 1.29 seconds (files took 28.47 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb:39
+# Run options: include {:locations=>{"./spec/admin/admin_users_spec.rb"=>[39]}}
+# F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+#      Failure/Error: expect(@admin_user.reload.email).to eq(new_email)
+
+#        expected: "new_email@example.com"
+#             got: "sari.kling@stroman.example"
+
+#        (compared using ==)
+#      # ./spec/admin/admin_users_spec.rb:44:in `block (4 levels) in <top (required)>'
+
+# Finished in 0.54394 seconds (files took 22.97 seconds to load)
+# 1 example, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb:39
+# Run options: include {:locations=>{"./spec/admin/admin_users_spec.rb"=>[39]}}
+# F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+#      Failure/Error: expect(@admin_user.reload.email).to eq(new_email)
+
+#        expected: "new_email@example.com"
+#             got: "karolyn@mcglynn.example"
+
+#        (compared using ==)
+#      # ./spec/admin/admin_users_spec.rb:44:in `block (4 levels) in <top (required)>'
+
+# Finished in 1.26 seconds (files took 32.66 seconds to load)
+# 1 example, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb:39
+# Run options: include {:locations=>{"./spec/admin/admin_users_spec.rb"=>[39]}}
+# .
+
+# Finished in 0.59228 seconds (files took 29 seconds to load)
+# 1 example, 0 failures
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb:39
+# Run options: include {:locations=>{"./spec/admin/admin_users_spec.rb"=>[39]}}
+# F
+
+# Failures:
+
+#   1) Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+#      Failure/Error: expect(response).to have_http_status(200)
+#        expected the response to have status code 200 but it was 302
+#      # ./spec/admin/admin_users_spec.rb:44:in `block (4 levels) in <top (required)>'
+
+# Finished in 0.56376 seconds (files took 23.96 seconds to load)
+# 1 example, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/admin_users_spec.rb:40 # Admin::AdminUsersController Admin Users resource PATCH#update updates admin user
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb:39
+
+# RSpec is shutting down and will print the summary report... Interrupt again to force quit (warning: at_exit hooks will be skipped if you force quit).
+# Terminate batch job (Y/N)? y
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\admin_users_spec.rb
+# ......
+
+# Finished in 1.41 seconds (files took 22.9 seconds to load)
+# 6 examples, 0 failures
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> code .
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\posts_spec.rb
+# .F.F..
+
+# Failures:
+
+#   1) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Animi molestiae perspiciatis ipsam."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <top (required)>'
+
+# Finished in 9.4 seconds (files took 49.85 seconds to load)
+# 6 examples, 2 failures
+
+# Failed examples:
+
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec spec\admin\comments_spec.rb
+# .F....
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+# Finished in 9.64 seconds (files took 25.67 seconds to load)
+# 6 examples, 1 failure
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app> rspec
+
+# While loading ./spec/admin/admin_users_spec.rb a `raise SyntaxError` occurred, RSpec will now quit.
+# Failure/Error: __send__(method, file)
+
+# SyntaxError:
+#   --> C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb
+#   unexpected string beginning, expecting end-of-inputunexpected 'do', expecting end-of-inputunexpected 'do', ignoring itunexpected 'end', ignoring it
+#       3  RSpec.describe Admin::AdminUsersController, type: :controller do
+#       4    describe "Admin Users resource" do
+#   >  39      describe 'PATCH#update' do-
+#   >  47      end
+#      99    end
+#     100  end
+
+#   C:/Users/Aayush Pandey/Desktop/BlogRspec_app/spec/admin/admin_users_spec.rb:40: syntax error, unexpected string literal, expecting `do' or '{' or '(' (SyntaxError)
+#         it "updates admin user" do
+#            ^
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2138:in `load'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:2138:in `load_file_handling_errors'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1638:in `block in load_spec_files'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1636:in `each'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/configuration.rb:1636:in `load_spec_files'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:102:in `setup'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:86:in `run'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:71:in `run'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/lib/rspec/core/runner.rb:45:in `invoke'
+# # C:/Ruby33-x64/lib/ruby/gems/3.3.0/gems/rspec-core-3.13.0/exe/rspec:4:in `<top (required)>'
+# # C:/Ruby33-x64/bin/rspec:25:in `load'
+# # C:/Ruby33-x64/bin/rspec:25:in `<main>'
+# #
+# #   Showing full backtrace because every line was filtered out.
+# #   See docs for RSpec::Configuration#backtrace_exclusion_patterns and
+# #   RSpec::Configuration#backtrace_inclusion_patterns for more information.
+# .F.....F.F........................
+
+# Failures:
+
+#   1) Admin::PostCommentsController GET#show show categories details
+#      Failure/Error: get :show, params: { id: @comment.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/comments_spec.rb:19:in `block (3 levels) in <top (required)>'
+
+#   2) Admin::PostsController GET#show show Post details
+#      Failure/Error: get :show, params: { id: @post.id }
+
+#      ActionView::Template::Error:
+#        Could not find table 'active_admin_comments'
+#      # ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <main>'
+#      # ------------------
+#      # --- Caused by: ---
+#      # ActiveRecord::StatementInvalid:
+#      #   Could not find table 'active_admin_comments'
+#      #   ./spec/admin/posts_spec.rb:20:in `block (3 levels) in <main>'
+
+#   3) Admin::PostsController PUT #update with valid parameters updates the requested post
+#      Failure/Error: expect(@post.title).to eq('Breweries')
+
+#        expected: "Breweries"
+#             got: "Reprehenderit et odit esse."
+
+#        (compared using ==)
+#      # ./spec/admin/posts_spec.rb:42:in `block (4 levels) in <main>'
+
+# Finished in 8.05 seconds (files took 45.08 seconds to load)
+# 34 examples, 3 failures, 1 error occurred outside of examples
+
+# Failed examples:
+
+# rspec ./spec/admin/comments_spec.rb:18 # Admin::PostCommentsController GET#show show categories details
+# rspec ./spec/admin/posts_spec.rb:18 # Admin::PostsController GET#show show Post details
+# rspec ./spec/admin/posts_spec.rb:39 # Admin::PostsController PUT #update with valid parameters updates the requested post
+
+# PS C:\Users\Aayush Pandey\Desktop\BlogRspec_app>
