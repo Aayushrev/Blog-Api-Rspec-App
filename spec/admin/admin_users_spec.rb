@@ -36,7 +36,7 @@ RSpec.describe Admin::AdminUsersController, type: :controller do
       end
     end
 
-    describe 'PATCH#update' do-
+    describe 'PATCH#update' do
       it "updates admin user" do
         new_email = "email@example.com"
         patch :update, params: { id: @admin_user.id, email: new_email }
